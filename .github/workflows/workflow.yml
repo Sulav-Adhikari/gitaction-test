@@ -8,6 +8,7 @@ jobs:
   prod:
     name: PROD ENV
     runs-on: self-hosted
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
